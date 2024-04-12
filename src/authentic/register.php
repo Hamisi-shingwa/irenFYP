@@ -14,7 +14,7 @@
              <input type="email" name="email">
          </div>
          <div class="input-element">
-            <div class="lable">Pascode</div>
+            <div class="lable">Passcode</div>
              <input type="password" name="password">
          </div>
          <div class="input-element">
