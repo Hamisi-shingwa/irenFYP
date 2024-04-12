@@ -1,0 +1,41 @@
+:root{
+    --bg: rgba(0, 170 , 255, 1);
+    --btnColor: green;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10pt;
+    font-family:  'Times New Roman', Times, serif;
+    color: rgb(87, 83, 83);
+}
+.main-container{
+    width: 90vw;
+    margin-top: 10px;
+    overflow: hidden;
+    height: 100vh;
+}
+.public-section{
+    display: flex;
+}
+.left-section{
+    width: 35%;
+}
+.right-section{
+    width: 64%;
+    margin-left: 10px;
+    height: 54vh;
+}
+.systemColor{
+  background-color: var(--bg);
+}
+.btncolor{
+    background-color: var(--btnColor);
+}

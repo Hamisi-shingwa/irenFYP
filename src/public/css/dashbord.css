@@ -1,0 +1,110 @@
+/* *****************************
+NAV BAR  CSS
+**************************** */
+.topsection_element{
+    position: relative;
+}
+.menu-container{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    margin-top: 30px;
+    background-color: #fff;
+    width: 15%;
+    height: 30vh;
+    transition: 1.2s;
+    transform: translateX(250px);
+}
+.transMenu{
+    transform: translateX(-0px);
+}
+.menu-container .menu-content{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.menu-container .menu-content .icons{
+   height: 20px;
+   width: 20px;
+}
+.menu-container .menu-content .menu-text{
+  margin-left: 20px;
+}
+.menu-container .menu-content .icons img{
+   height: 100%;
+   width: 100%;
+}
+.right_section_top{
+    display: flex;
+    justify-content: space-between;
+}
+.right_section_top .menu_page{
+    width: 7%;
+    height: 70%;
+}
+.right_section_top .menu_page img{
+    width: 70%;
+    height: 90%;
+    cursor: pointer;
+}
+/* ********************************
+SECTION CSS
+******************************* */
+.middashbord-container{
+    position: relative;
+    z-index: 1;
+}
+.middashbord-container .top{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.middashbord-container .top .login-status{
+    color: var(--bg);
+    font-weight: bold;
+}
+.middashbord-container .top .warning-container{
+  display: flex;
+}
+.middashbord-container .top .warning-size{
+ font-weight: bold;
+ color: brown;
+}
+.middashbord-container .top .warning-info{
+    color: var(--bg);
+    cursor: pointer;
+}
+.middashbord-container .downside{
+    height: 30px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+.middashbord-container .downside .current-status{
+  font-weight: bold;
+ font-size: 11pt;
+  text-decoration: underline;
+}
+.middashbord-container .downside .reft-link{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+.middashbord-container .downside .reft-link *{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+.middashbord-container .downside .reft-link .icons{
+   width: 20px;
+   height: 20px;
+}
+.middashbord-container .downside .reft-link .icons img{
+   width: 100%;
+   height:100%;
+}

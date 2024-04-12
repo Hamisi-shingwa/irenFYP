@@ -1,0 +1,201 @@
+:root{
+    --shadow: 0px 0px 3px 1px rgb(120, 115, 115);
+}
+
+/* **************************************************
+EXNAVBAR CSS
+************************************************** */
+.exnav_container{
+    width: 100%;
+    height: 120px;
+}
+.exnav_header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 25%;
+}
+.exnav_header .exnav_dashbord{
+    width: 30%;
+    height: 30px;
+    background-color: var(--bg);
+    border-radius: 10px;
+ 
+}
+.exnav_jumbotron{
+  height: 75%;
+  background-color: var(--bg);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  margin-top: 2px;
+}
+.exnav_jumbotron a{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.exnav_jumbotron .exnav_jumbotrone_content{
+    width: 98%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.system_logo{
+    width: 20%;
+    height: 100%;
+}
+.system_logo img{
+    width: 100%;
+    height: 100%;
+}
+.search_element_contaner{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.search_element{
+    background-color: #fff;
+    width: 45%;
+    display: flex;
+    height: 100%;
+  
+}
+.search_element .search_icon{
+  width: 19%;
+  height: 100%;
+}
+.search_element .search_icon img{
+    width: 100%;
+    height: 100%;
+}
+.search_element .exnav_search{
+    width: 81%;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.exnav_select_element{
+    width: 44%;
+    height: 100%;
+}
+.exnav_select_element select{
+    width: 100%;
+    height: 100%;
+}
+.exnavgo_btn{
+    width: 7%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.exnavgo_btn button{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.exnav_login_btn{
+    width: 40%;
+    height: 100%;
+}
+.exnavbar-link-element{
+    display: flex;
+    width: 25%;
+}
+.exnav_login_btn a{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+   
+}
+.exnav_login_btn a button{
+    width: 98%;
+    height: 100%;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* **************************************************
+PUBLIC SECTION
+************************************************** */
+.topsection_element{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    margin-top: 10px;
+}
+.left_section_top, .right_section_top{
+    width: 35%;
+    height: 100%;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+}
+.left_section_top{
+    display: flex;
+    align-items: center;
+}
+.left_section_top .photo{
+    width: 15%;
+    height: 70%;
+   
+}
+.left_section_top .photo img{
+   width: 100%;
+   height: 100%;
+}
+.left_section_top .infomation .status{
+   color: var(--bg);
+}
+.right_section_top{
+    width: 64%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+}
+.active_section{
+    color: green;
+}
+
+/* *****************************************************
+PUBLIC ASIDE CSS
+***************************************************** */
+.publucaside_container{
+    width: 100%;
+    box-shadow: var(--shadow);
+    margin-top: 10px;
+}
+.publucaside_container .public-image-profile{
+    width: 100%;
+    height: 30%;
+}
+.publucaside_container .public-image-profile img{
+    width: 100%;
+    height: 100%;
+}
+.medical_Category{
+    margin-top: 5px;
+    cursor: pointer;
+}
+.medical_list{
+    display: none;
+}
+.medical_list a{
+    display: block;
+    text-decoration: none;
+    color: grey;
+}
+/* * *****************************************************
+CUSTOMED CUROUSAL
+***************************************************** */ 
+#carouselBlk, .container, a{
+    width: 100%;
+}
+#carouselBlk .container a img{
+    width: 100%;
+    height: 100%;
+}

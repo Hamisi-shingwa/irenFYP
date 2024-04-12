@@ -1,0 +1,50 @@
+<?php
+session_start();
+//we check if someone access system is not login user
+if(!$_SESSION['user_token'] && !$_SESSION['username']){
+    header("location:../index.php");
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iren pharmacy management system fyp</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/home.css">
+    <link rel="stylesheet" href="../public/css/dashbord.css">
+    <link rel="stylesheet" href="../public/css/records.css">
+</head>
+<body>
+    <div class="main-container">
+        <?php require "./innavbar.php"?>
+        <?php require "./authsection.php"?>
+        <div class="public-section">
+            <div class="left-section">
+                <?php require "./authaside.php"?>
+            </div>
+           <div class="right-section">
+           <?php require "./middashbord.php"?>
+            <?php 
+            $page = "";
+            if(isset($_GET['page'])){
+                $page = $_GET['page'];
+            }
+             if($page){
+                require "./pagerender.php";
+             }
+             else{
+              
+             }
+            ?>
+          
+           </div>
+        </div>
+           </div>
+        </div>
+    </div>
+</body>
+<script src="../public/js/vanila/dashbord.js"></script>
+</html>

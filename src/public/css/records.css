@@ -1,0 +1,129 @@
+/* ***************************
+ADD SELLS RECORDS CSS
+****************************** */
+.form-container{
+    margin-top: 20px;
+    position: relative;
+}
+#loginForm{
+    margin-top: 10px;
+}
+#loginForm input, #addnewMedic input, #selectmedics{
+height: 30px;
+width: 23%;
+display: inline-block;
+ margin-left: 7px;
+ margin-top: 10px;
+ border: none;
+ box-shadow: var(--shadow);
+ outline: none;
+ padding: 5px;
+}
+.submit-in{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.submit-in button{
+    background-color: var(--bg);
+    border: none;
+    border-radius: 4px;
+    width: 70px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+}
+.added-feedback{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+.added-feedback .feedbackIcon{
+    width: 20px;
+    height: 20px;
+    
+}
+.added-feedback .feedbackIcon img{
+    width: 100%;
+    height: 100%;
+   
+}
+.added-feedback .status{
+    color: green;
+    font-weight: bold;
+}
+/* ************************************
+ADDNEW MEDICS CSS
+*********************************** */
+#addnewMedic .topInfo{
+    display: flex;
+    justify-content: space-between;
+}
+#addnewMedic .left-details, .right-details{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#addnewMedic input{
+  width: 60%;
+   
+}
+#addnewMedic input[type='submit']{
+ background-color: var(--bg);
+ color: #fff;
+ border-radius: 5px;
+ cursor: pointer;
+}
+.feedback-element{
+    display: none;
+}
+.show{
+    margin-top: 20px;
+    display: grid;
+    place-items: center;
+   
+}
+.show p{
+    color: red;
+}
+
+/* ***********************************
+HISTORY SELLS CSSS
+*********************************** */
+.no-sells-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.no-sells-info .info{
+    color: gray;
+}
+.no-sells-info button{
+   background-color: var(--bg);
+   color: #fff;
+   border: none;
+  height: 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.displayed-histry{
+    border-top: none;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+}
+.displayed-histry *{
+    border-left: 2px solid;
+    width: 25%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
