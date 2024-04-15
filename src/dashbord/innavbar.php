@@ -28,7 +28,7 @@
            
            <div class="exnavbar-link-element">
            <a href="">Available medics</a>
-            <a href="">New medics</a>
+            <a href="./dashbord.php?page=Addmedics">New medics</a>
             <div class="exnav_login_btn">
                 <a href='../authentic/logout.php'><button class="exnavlogin_btn btncolor">Logout</button></a>
             </div>
