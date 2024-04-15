@@ -1,6 +1,12 @@
 <div class="publucaside_container">
-    <div class="public-image-profile">
-    <?php require "../home/imageprofile.php";?>
+    <div class="public-image-profile dashbord-image-profile"> 
+    <?php 
+     if($page=='userprofile'){
+        require "./userphoto.php";
+     }else{
+        require "../home/imageprofile.php";
+     }
+  ?>
     </div>
     <div class="public_medicallist_container">
         <div class="available_medics">

@@ -108,3 +108,57 @@ SECTION CSS
    width: 100%;
    height:100%;
 }
+.dashbord-image-profile .photo{
+    height: 40vh;
+}
+/* ************************************
+EDITUSER CSS
+********************************** */
+.edit-user-container{
+    position: relative;
+}
+.edit-user-container .profile-picture{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.edit-user-container .profile-picture img{
+    width: 100%;
+    height: 100%;
+}
+.edit-user-container .profile-picture input{
+   display: none;
+}
+.edit-user-container .top-downinfo, .down-downinfo{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+   margin-top: 20px;
+}
+.edit-user-container input{
+   border: none;
+   outline: none;
+   border-bottom: 1px solid grey;
+}
+.edit-user-container .left-downifo, .right-downifo{
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+.edit-user-container input[type='submit']{
+   width: 50%;
+   background-color: var(--bg);
+   height: 30px;
+   border-radius: 5px;
+   color: #fff;
+   cursor: pointer;
+ }
+ .edit-user-container form{
+    position: relative;
+ }
+ .edit-user-container .edited-user{
+ border: 2px solid black;
+ }
+ .edit-user-container .edited-feedback{
+    border: 2px solid;
+ }

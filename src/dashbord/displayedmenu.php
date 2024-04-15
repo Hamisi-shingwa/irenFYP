@@ -1,7 +1,7 @@
 <div class="menu-container">
     <div class="menu-content">
         <div class="icons"><img src="../assets/icons/person.png" alt=""></div>
-        <a style="text-decoration:none; color:black;" href="./dashbord.php?page=Profile"><div class="menu-text">Profile</div></a>
+        <a style="text-decoration:none; color:black;" href="./dashbord.php?page=userprofile"><div class="menu-text">Profile</div></a>
     </div>
     <div class="menu-content">
         <div class="icons"><img src="../assets/icons/add.png" alt=""></div>

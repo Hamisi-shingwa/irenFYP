@@ -25,14 +25,16 @@ if(!$_SESSION['user_token'] && !$_SESSION['username']){
             <div class="left-section">
                 <?php require "./authaside.php"?>
             </div>
-           <div class="right-section">
-           <?php require "./middashbord.php"?>
+        <div class="right-section">
             <?php 
             $page = "";
             if(isset($_GET['page'])){
                 $page = $_GET['page'];
+
             }
              if($page){
+              
+                if($page!="userprofile")   require "./middashbord.php";
                 require "./pagerender.php";
              }
              else{
@@ -40,7 +42,7 @@ if(!$_SESSION['user_token'] && !$_SESSION['username']){
              }
             ?>
           
-           </div>
+        </div>
         </div>
            </div>
         </div>

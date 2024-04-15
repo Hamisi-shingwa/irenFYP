@@ -9,7 +9,7 @@
     <div class="downside">
         <div class="current-status"> 
              <?php if(isset($_GET['page'])){
-                echo $_GET['page'];
+                echo $_GET['page']; 
             }
             else echo "sells"?></div>
         <div class="reft-link">

@@ -16,3 +16,22 @@ if(successedElement){
      successedElement.style.display = "none";
     },3000)
 }
+
+//Edited form javascript
+const ProfileForm = document.querySelector('.profile-picture')
+const File = document.querySelector('#profileInput')
+
+if(ProfileForm){
+    ProfileForm.addEventListener('click',()=>{
+        File.click()
+        handleClick(File)
+    })
+}
+
+function handleClick(file){
+  file.addEventListener('change',(e)=>{
+    const newImg = file.files[0];
+    const url = URL.createObjectURL(newImg)
+    ProfileForm.querySelector('img').src = url
+  })
+}

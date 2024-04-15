@@ -1,7 +1,7 @@
 
   <div class="topsection_element">
     <div class="left_section_top">
-        <div class="photo"><img src="../assets/icons/person.png" alt=""></div>
+       <?php require "./userphoto.php"?>
         <div class="infomation">
             <div class="status">Current User</div>
             <div class="name"><?php echo $_SESSION['username']?></div>
