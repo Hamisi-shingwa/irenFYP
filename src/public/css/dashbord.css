@@ -108,6 +108,12 @@ SECTION CSS
    width: 100%;
    height:100%;
 }
+.middashbord-container .downside .warning{
+    color: yellow;
+}
+.middashbord-container .downside .danger{
+    color: red;
+}
 .dashbord-image-profile .photo{
     height: 40vh;
 }
@@ -161,4 +167,65 @@ EDITUSER CSS
  }
  .edit-user-container .edited-feedback{
     border: 2px solid;
+ }
+ /* ********************************
+ ALERT CSS
+ ******************************** */
+ .alert-container{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .alert-container .alerts-number{
+    font-size: large;
+    text-transform: uppercase;
+    color: red;
+ }
+ .alert-container .alert-message{
+    box-shadow: var(--shadow);
+    width: 70%;
+    height: 70px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+ }
+ .alert-container .alert-message a{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    text-decoration: none;
+    color: red;
+ }
+
+ /* ************************************
+ EXPIRED MEDICS
+ ************************************ */
+ .expired-medical-list{
+    font-size: large;
+    font-weight: bold;
+ }
+ .expired-medical-list, .expired-list{
+    display: flex;
+    justify-content: space-between ;
+ }
+ .expired-medical-list *, .expired-list *{
+    border: 1px solid rgb(196, 183, 183);
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    height: 30px;
+    display: grid;
+    place-items: center;
+ }
+ .expired-list a{
+    display: none;
+ }
+ .expired-list .status, .delete{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12pt;
  }

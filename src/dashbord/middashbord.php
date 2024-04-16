@@ -2,8 +2,20 @@
     <div class="top">
         <div class="login-status">LOGED</div>
         <div class="warning-container">
-            <div class="warning-size">(0)</div>
-            <div class="warning-info">avaiable warning</div>
+           <?php
+            include "../system_alerts/searchedwarning.php";
+           if($lessdose > 0){
+            echo"
+            <div class='warning-size'>($lessdose)</div>
+            <a href='./dashbord.php?page=warningList'><div class='warning-info'>avaiable warning</div></a> ";
+           
+           }elseif($lessdose==0){
+            echo"
+            <div class='warning-size'>(0)</div>
+           <div class='warning-info'>avaiable warning</div> 
+            ";
+           }
+           ?>
         </div>
     </div>
     <div class="downside">
@@ -27,7 +39,17 @@
             </div>
             <div class="av-link">
                 <div class="icons"><img src="../assets/icons/notification.png" alt=""></div>
-                <a href="./dashbord.php?page=Expiredmedics"><div class="text">Expired</div></a>
+                <?php
+              
+                if($expired==0){
+                   echo "<a href='./dashbord.php?page=Expiredmedics_less'><div class='text'>Expired</div></a>";
+                }elseif($expired > 0){
+                    echo "<a href='./dashbord.php?page=Expiredmedics_less'><div class='text danger'>Expired($expired)</div></a>";
+                }
+                elseif($warning=='warning'){
+                    echo "<a href='./dashbord.php?page=Expiredmedics'><div class='text warning'>Expired</div></a>";
+                }
+                ?>
             </div>
         </div>
     </div>

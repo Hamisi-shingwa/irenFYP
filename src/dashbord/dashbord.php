@@ -30,12 +30,16 @@ if(!$_SESSION['user_token'] && !$_SESSION['username']){
             $page = "";
             if(isset($_GET['page'])){
                 $page = $_GET['page'];
-
+             {
+                  
+    
+                }
             }
              if($page){
               
                 if($page!="userprofile")   require "./middashbord.php";
                 require "./pagerender.php";
+                if($page=='currently')    include "./alert_filecheckup.php";
              }
              else{
               
