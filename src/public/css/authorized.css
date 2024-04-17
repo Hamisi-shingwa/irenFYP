@@ -1,0 +1,33 @@
+/* *****************************************
+SYSTEM SETTING CSS
+**************************************** */
+form .top-system-content label, .setting-input, textarea{
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+   
+}
+form .top-system-content textarea, .setting-input{
+    height: 30px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(169, 158, 158);
+    border-radius: 4px;
+    padding: 5px;
+}
+#system-setting label{
+    margin-bottom: -10px;
+}
+form .top-system-content textarea{
+    resize: none;
+    height: 20vh;
+    border: 1px solid var(--bg);
+}
+.bellow-system-content{
+    margin-top: 10px;
+    
+}
+.bellow-system-content .use-default-profile{
+    display: flex;
+    justify-content: space-between;
+}
