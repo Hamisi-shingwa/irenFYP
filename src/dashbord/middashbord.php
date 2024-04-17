@@ -7,7 +7,7 @@
            if($lessdose > 0){
             echo"
             <div class='warning-size'>($lessdose)</div>
-            <a href='./dashbord.php?page=warningList'><div class='warning-info'>avaiable warning</div></a> ";
+            <a href='./dashbord.php?page=warningList1' class='warning-link'><div class='warning-info'>avaiable warning</div></a> ";
            
            }elseif($lessdose==0){
             echo"
@@ -40,7 +40,7 @@
             <div class="av-link">
                 <div class="icons"><img src="../assets/icons/notification.png" alt=""></div>
                 <?php
-              
+                  include "../system_alerts/searchexpired.php";
                 if($expired==0){
                    echo "<a href='./dashbord.php?page=Expiredmedics_less'><div class='text'>Expired</div></a>";
                 }elseif($expired > 0){

@@ -39,15 +39,17 @@ if($expired ==0){
         $diffInSeconds =  $expiredDate - $currentTime;
 
         $diffInDays = ($diffInSeconds / (60 * 60 * 24));
+         
 
         if($diffInDays <=30 ){
+          $info = floor($diffInDays);
           echo "<div class='expired-list'>";
           echo "<div> $id</div>";
           echo "<div>$mdcategory</div>";
           echo "<div>$mdname</div>";
-          echo "<div class='status'>Expired</div>";
+          echo "<div class='status'>$info days remain to expire</div>";
           echo "<div class='delete'>Delete</div>";
-          echo "<a href='../authorized/deletemedics.php?mdid=$id'></a>";
+          echo "<a href='../authorized/deletemedics.php?mdid=$id&&page=lesexpired'></a>";
           echo "</div>";
         }
       }
@@ -57,3 +59,4 @@ if($expired ==0){
    
 
 ?>
+

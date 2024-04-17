@@ -35,3 +35,31 @@ function handleClick(file){
     ProfileForm.querySelector('img').src = url
   })
 }
+
+///Function to delete expired and warning medics
+const Deletes = document.querySelectorAll('.delete')
+const DialogConatiner = document.querySelector('.dialog-container')
+if(DialogConatiner){
+  DialogConatiner.style.display = "none"
+}
+if(Deletes){
+ Deletes.forEach((deletes=>{
+    deletes.onclick = ()=>{
+      DialogConatiner.style.display = "block"
+      if(DialogConatiner){
+      
+        let buttons = DialogConatiner.querySelectorAll('button')
+        buttons.forEach(button=>{
+          button.onclick = ()=>{
+            if(button.textContent=="Yes"){
+              deletes.nextElementSibling.click()
+            }else{
+              DialogConatiner.style.display = "none"
+            }
+          }
+        })
+        
+      }
+    }
+ }))
+}

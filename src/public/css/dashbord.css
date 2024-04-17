@@ -1,8 +1,10 @@
 /* *****************************
 NAV BAR  CSS
 **************************** */
+ 
 .topsection_element{
     position: relative;
+    
 }
 .menu-container{
     position: absolute;
@@ -33,6 +35,9 @@ NAV BAR  CSS
 .menu-container .menu-content .icons img{
    height: 100%;
    width: 100%;
+}
+.main-container .right-section{
+    overflow-y: scroll;
 }
 .right_section_top{
     display: flex;
@@ -71,8 +76,12 @@ SECTION CSS
  color: brown;
 }
 .middashbord-container .top .warning-info{
-    color: var(--bg);
+    color: rgb(178, 178, 24);
     cursor: pointer;
+}
+.middashbord-container .top .warning-link{
+    text-decoration: none;
+   
 }
 .middashbord-container .downside{
     height: 30px;
@@ -210,6 +219,8 @@ EDITUSER CSS
  .expired-medical-list, .expired-list{
     display: flex;
     justify-content: space-between ;
+    position: relative;
+    z-index: 1;
  }
  .expired-medical-list *, .expired-list *{
     border: 1px solid rgb(196, 183, 183);
@@ -227,5 +238,39 @@ EDITUSER CSS
     color: red;
     text-decoration: none;
     cursor: pointer;
+    font-size: 9pt;
+ }
+ .expired-list .delete{
     font-size: 12pt;
  }
+ .dialog-container{
+    background-color: rgb(188, 188, 201);
+    width: 30%;
+    border-radius: 2px;
+    position: fixed ; 
+    top: 50%;
+   z-index: 2;
+   
+ }
+ .dialog-container .dialog-message{
+    color: rgb(149, 11, 11) ;
+    display: grid;
+    place-items: center;
+    
+    width: 100%;
+ }
+ .dialog-container .dialog-action{
+    display: flex   ;
+    justify-content: space-around;
+    width: 100%;
+ }
+ .dialog-container .dialog-action .yes, .no{
+    width: 50%;
+    display: grid;
+    place-items: center;
+ }
+ .dialog-container .dialog-action button{
+    width: 40%;
+    cursor: pointer;
+ }
+ 

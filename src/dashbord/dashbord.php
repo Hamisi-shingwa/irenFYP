@@ -16,6 +16,7 @@ if(!$_SESSION['user_token'] && !$_SESSION['username']){
     <link rel="stylesheet" href="../public/css/home.css">
     <link rel="stylesheet" href="../public/css/dashbord.css">
     <link rel="stylesheet" href="../public/css/records.css">
+    <link rel="stylesheet" href="../public/css/authorized.css">
 </head>
 <body>
     <div class="main-container">
@@ -37,7 +38,7 @@ if(!$_SESSION['user_token'] && !$_SESSION['username']){
             }
              if($page){
               
-                if($page!="userprofile")   require "./middashbord.php";
+                if($page!="userprofile" && $page!="Setting")   require "./middashbord.php";
                 require "./pagerender.php";
                 if($page=='currently')    include "./alert_filecheckup.php";
              }
@@ -50,7 +51,14 @@ if(!$_SESSION['user_token'] && !$_SESSION['username']){
         </div>
            </div>
         </div>
-    </div>
+    </div> 
+    <div class='dialog-container'>
+          <div class='dialog-message'>Are you sure want to delete it?</div>
+          <div class='dialog-action'>
+            <div class='yes'><button>Yes</button></div>
+            <div class='no'><button>No</button></div>
+          </div>
+        </div>   
 </body>
 <script src="../public/js/vanila/dashbord.js"></script>
 </html>
