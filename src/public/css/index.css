@@ -23,6 +23,7 @@ body *{
     margin-top: 10px;
     overflow: hidden;    
     height: 100vh;
+   
 }
 .public-section{
     display: flex;
@@ -33,7 +34,8 @@ body *{
 .right-section{
     width: 64%;
     margin-left: 10px;
-    height: 54vh;
+    height: 100vh;
+  
 }
 .systemColor{
   background-color: var(--bg);

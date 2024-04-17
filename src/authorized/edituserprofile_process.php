@@ -8,7 +8,7 @@ $email = $_POST['email'];
 $profile = $_FILES['profile'];
 $hidden = $_POST['hidden'];
 $file = "";
-
+ 
 //let us check user has profile or not
 if($hidden=="NULL"){
     $temfile = $profile['tmp_name'];

@@ -1,3 +1,11 @@
+<?php
+require_once("../db/dbconnect.php");
+$token = $_SESSION['user_token'];
+
+$sql = "SELECT medical_name from medics where utoken='$token'";
+ $query = mysqli_query($conn, $sql);
+
+?>
 <div class="exnav_container">
     <div class="exnav_header">
         <div class="exnav_text">Welcome !</div>
@@ -12,17 +20,23 @@
             <div class="search_element_contaner">
             <div class="search_element">
                 <div class="search_icon"><img src="../assets/icons/search_FILL0_wght400_GRAD0_opsz48.png" alt=""></div>
-                <input type="text" class="exnav_search">
+                <input type="text" class="exnav_search" id='inav-search'>
             </div>
             <div class="exnav_select_element">
                 <select name="select_element" id="select">
-                    <option value="">Available</option>
-                    <option value="">Available</option>
-                    <option value="">Available</option>
+                    <option value="">Select Medics</option>
+                    <?php
+                      while($datas = mysqli_fetch_array($query)){
+                        $mdname = $datas['medical_name'];
+                        echo "
+                        <option value='$mdname'>$mdname</option>
+                        ";
+                      }
+                    ?>
                 </select>
             </div>
             <div class="exnavgo_btn">
-                <button>GO</button>
+                <button id='innavbutton'>GO</button>
             </div>
             </div>
            

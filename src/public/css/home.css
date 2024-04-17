@@ -97,7 +97,7 @@ EXNAVBAR CSS
     display: grid;
     place-items: center;
 }
-.exnavgo_btn button{
+.exnavgo_btn button{ 
     width: 100%;
     height: 100%;
     cursor: pointer;

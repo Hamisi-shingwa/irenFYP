@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 //we check if someone access system is not login user
 if(!$_SESSION['user_token'] && !$_SESSION['username']){
     header("location:../index.php");
@@ -17,6 +18,7 @@ if(!$_SESSION['user_token'] && !$_SESSION['username']){
     <link rel="stylesheet" href="../public/css/dashbord.css">
     <link rel="stylesheet" href="../public/css/records.css">
     <link rel="stylesheet" href="../public/css/authorized.css">
+    <link rel="stylesheet" href="../public/css/seached.css">
 </head>
 <body>
     <div class="main-container">

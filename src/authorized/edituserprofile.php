@@ -8,7 +8,7 @@ $query = mysqli_query($conn, $sql);
 if($query){
     $datas = mysqli_fetch_array($query);
     $name = $datas['name'];
-    $phone = $datas['phone'];
+    $phone = $datas['phone']; 
     $email = $datas['email'];
     $profile = $datas['profile'];
    

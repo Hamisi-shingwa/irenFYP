@@ -6,4 +6,5 @@ $page =="userprofile" ? require "../authorized/edituserprofile.php": "";
 $page =="Setting" ? require "../authorized/changesystemsetting.php": "";
 $page =="Expiredmedics_less" ? require "../system_alerts/lesexpiredlist.php": "";
 $page =="warningList1" ? require "../system_alerts/leswarninglist.php": "";
+$page =="searched" ? require "../searched/searched_medics.php": "";
 ?>

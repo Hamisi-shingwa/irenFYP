@@ -1,0 +1,19 @@
+
+.top-medics-info{
+  display: flex;
+  justify-content: space-around;
+}
+.left-medic-info{
+    width: 20%;
+    height: 20vh;
+}
+.left-medic-info img{
+    width: 100%;
+    height: 100%;
+}
+.right-medics-info{
+    width: 70%;
+}
+table{
+    width: 60%;
+}

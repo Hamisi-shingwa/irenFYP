@@ -1,10 +1,10 @@
 <div class="publucaside_container">
-    <div class="public-image-profile dashbord-image-profile"> 
+    <div class=" dashbord-image-profile"> 
     <?php 
      if($page=='userprofile'){
         require "./userphoto.php";
      }else{
-        require "../home/imageprofile.php";
+        require "../home/imageprofile.php"; 
      }
   ?>
     </div>
