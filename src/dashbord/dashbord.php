@@ -64,4 +64,5 @@ if(!$_SESSION['user_token'] && !$_SESSION['username']){
         </div>   
 </body>
 <script src="../public/js/vanila/dashbord.js"></script>
+<script src="../public/js/vanila/form.js"></script>
 </html>

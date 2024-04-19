@@ -5,6 +5,8 @@ include "../system_alerts/searchexpired.php";//This is file that search if there
 if($expired > 0){
     //Note variable expired is found in searchexpired file so don't be comfused
     require "../system_alerts/alertexpired.php";
+}else{
+    require "./no_alert.php";
 }
 
 ?>

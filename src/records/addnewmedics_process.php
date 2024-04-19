@@ -34,8 +34,8 @@ insertNewMedics($conn, $utoken, $category, $medicalname, $dosage ,$expiredOn, $p
          if($checkquery){
            if(mysqli_num_rows($checkquery) == 0){
               //Insert all records to database
-        $sql = "INSERT into medics(medical_category,medical_name,medical_dosage,expiring_date,utoken)
-        VALUES('$category','$medicalname','$dosage','$expiredOn','$utoken')";
+        $sql = "INSERT into medics(medical_category,medical_name,medical_dosage,total_price,expiring_date,utoken)
+        VALUES('$category','$medicalname','$dosage',$price,'$expiredOn','$utoken')";
  
         $query = mysqli_query($conn, $sql);
         if($query){
@@ -47,7 +47,7 @@ insertNewMedics($conn, $utoken, $category, $medicalname, $dosage ,$expiredOn, $p
            }
          }  
       }
-       
+        
        
 
     }else{

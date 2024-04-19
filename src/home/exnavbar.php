@@ -40,8 +40,8 @@
             </div>
            
            <div class="exnavbar-link-element">
-           <a href="">About me</a>
-            <a href="">Help</a>
+           <a href="./index.php?page=aboutus">About me</a>
+            <a href="./index.php">Home</a>
             <div class="exnav_login_btn">
                 <a href='./index.php?page=login'><button class="exnavlogin_btn btncolor">Login</button></a>
             </div>

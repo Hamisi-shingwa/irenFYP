@@ -26,11 +26,12 @@ h4{
 .signed-in{
     display: flex;
     justify-content: space-between;
-}
+}   
 .signed-in .buttonElement{
     display: flex;
-    width: 58%;
+    width: 52%;
     justify-content: space-between;
+    /* border: 2px solid; */
 }
 .signed-in .buttonElement button{
      width: 45%;

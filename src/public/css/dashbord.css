@@ -37,6 +37,7 @@ NAV BAR  CSS
 }
 .main-container .right-section{
     overflow-y: scroll;
+   
 }
 .right_section_top{
     display: flex;
@@ -126,10 +127,10 @@ SECTION CSS
 DISPLAYDE PUBLIC PROFILE
 *************************************** */
 .publucaside_container{
-   height: 50vh;
+   height: auto;
 }
 .dashbord-image-profile, .photo{
-  height: 70%;
+  height: 40vh;
 }
 .dashbord-image-profile img{
    width: 100%;
@@ -138,7 +139,16 @@ DISPLAYDE PUBLIC PROFILE
 .dashbord-image-profile .photo{
    height: 90%;
 }
-
+.medical_Category{   
+   text-transform: uppercase;
+}
+.welcome-doshabord{
+   margin-top: 20px;
+}
+.welcome-doshabord p{
+   margin-top: 10px;
+   color: gray;
+}
 /* ************************************
 EDITUSER CSS
 ********************************** */

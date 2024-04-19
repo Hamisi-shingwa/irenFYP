@@ -11,7 +11,7 @@ if(mysqli_num_rows($query) != 0){
     <div>Medics</div>
     <div>Selled Dosage</div>
     <div>Selled Amount</div>
-    <div>Selled Date</div>
+    <div>Selled Date</div> 
   </div>";
     while($datas = mysqli_fetch_array($query)){
         $name = $datas['medical_name'];

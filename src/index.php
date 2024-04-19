@@ -43,5 +43,6 @@
 	
 	<script src="public/js/template/bootshop.js"></script>
     <script src="public/js/template/jquery.lightbox-0.5.js"></script>
+    <script src="./public/js/vanila/form.js"></script>
     
 </html>

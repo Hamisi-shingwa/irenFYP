@@ -11,7 +11,7 @@
          </div>
          <div class="signed-in">
             <div class="emptyElement"></div>
-            <div class="buttonElement">
+            <div class="buttonElement"> 
                 <button class="login-button" type="submit" name="sbtn">Sign in</button>
                 <span>OR</span>
                 <button class="login-button"><a href="./index.php?page=register">Register now</a></button>

@@ -94,7 +94,7 @@ ADDNEW MEDICS CSS
 HISTORY SELLS CSSS
 *********************************** */
 .no-sells-info{
-    height: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,7 +107,7 @@ HISTORY SELLS CSSS
    background-color: var(--bg);
    color: #fff;
    border: none;
-  height: 30px;
+  height: 30px; 
   border-radius: 5px;
   margin-top: 10px;
   cursor: pointer;

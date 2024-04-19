@@ -126,6 +126,17 @@ EXNAVBAR CSS
     border-radius: 10px;
     cursor: pointer;
 }
+.aboutus{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.aboutus h4{
+    text-transform: uppercase;
+    font-size: large;
+}
 /* **************************************************
 PUBLIC SECTION
 ************************************************** */

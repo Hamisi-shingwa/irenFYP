@@ -3,28 +3,26 @@
  $medic = $_GET['medic'];
  $token = $_SESSION['user_token'];
 
- $sql = "SELECT * from last_inserted where md_id='$medic' AND utoken='$token'";
+ $sql = "SELECT * from medics where id='$medic' AND utoken='$token'";
  $query = mysqli_query($conn, $sql);
  
  if(mysqli_num_rows($query)!=0){
   $data = mysqli_fetch_array($query);
   $id = $data['id'];
-  $mdid = $data['md_id'];
+//   $mdid = $data['md_id'];
   $mdname = $data['medical_name'];
   $mddose = $data['medical_dosage'];
   $expiredTime = $data['expiring_date'];
   $adddedTime = $data['added_date'];
   $mdprice = $data['total_price'];
  }else{
-   require "../authorized/editfirstadded.php";
-   echo "<script src='../public/js/vanila/dashbord.js'></script>";
-    die();
+  echo "You forgi route";
  }
  ?>
  
  <div class="form-container add-singlemedics-container">
     <h4>Edit Last inserted <?php echo $mdname?></h4>
-    <form action="../authorized/editmedics_process.php" method="post" id='add-single-medics'>
+    <form action="../authorized/editfirstadded_process.php" method="post" id='add-single-medics'>
         <div class="input-container">
             <input type="hidden" name="id" value="<?php echo $id?>">
             <input type="hidden" name="mddosage" value="<?php echo $mddose?>">
