@@ -8,13 +8,18 @@ if(!$token){
     require_once("../db/dbconnect.php");
   $page = $_GET['page'];
   $mdid = $_GET['mdid'];
-
+  $Medics = $_GET['medics'];
+ 
   $sql = "DELETE from medics where id='$mdid'";
-  $query = mysqli_query($conn, $sql);
+  $query1 = mysqli_query($conn, $sql);
 
+   $sql2 = "DELETE from last_inserted where id='$mdid'";
+   $query = mysqli_query($conn, $sql2);
   if($query){
     $page == "lesexpired" ? header("location:../dashbord/dashbord.php?page=Expiredmedics_less") : "";
     $page == "leswarning" ? header("location:../dashbord/dashbord.php?page=warningList1") : "";
+    $page == "searched" ? header("location:../dashbord/dashbord.php?page=searched&&medics=$Medics") : "";
+    $page == "allMedics" ? header("location:../wideview/main.php?page=allMedics&&medics=$Medics") : "";
   }
 }
 ?>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./public/css/authentic.css">
 </head>
 <body>
+<script src="./public/js/vanila/pre-loader.js"></script>
     <div class="main-container">
         <?php require "./home/exnavbar.php"?>
         <?php require "./home/publicsection.php"?>
@@ -42,4 +43,5 @@
 	
 	<script src="public/js/template/bootshop.js"></script>
     <script src="public/js/template/jquery.lightbox-0.5.js"></script>
+    
 </html>

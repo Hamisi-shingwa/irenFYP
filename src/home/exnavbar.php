@@ -1,3 +1,15 @@
+<?php
+ require_once("./db/dbconnect.php");
+ $sql = "SELECT system_name from system_setting";
+ $query = mysqli_query($conn, $sql);
+ $hasName = false;
+ if(mysqli_num_rows($query)!=0){
+   $hasName = true;
+   $sysname = mysqli_fetch_array($query)['system_name'];
+ }
+ 
+
+?>
 <div class="exnav_container">
     <div class="exnav_header">
         <div class="exnav_text">Welcome !</div>
@@ -11,8 +23,18 @@
             </div>
             <div class="search_element_contaner">
             <div class="search_element search-home">
-         
-                 PHARMACY MANAGEMENT SYSTEM
+         <?php
+            if($hasName){
+                if($sysname!="NULL"){
+                    echo $sysname;
+                }else{
+                    echo "PHARMACY MANAGEMENT SYSTEM";
+                }
+            }else{
+                echo "PHARMACY MANAGEMENT SYSTEM";
+            }
+         ?>
+                
             </div>
             
             </div>

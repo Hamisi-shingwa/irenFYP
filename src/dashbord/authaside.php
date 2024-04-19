@@ -1,3 +1,10 @@
+<?php
+$token = $_SESSION['user_token'];
+require_once("../db/dbconnect.php");
+
+$sql = "SELECT medical_category, medical_name from medics where utoken='$token'";
+$query = mysqli_query($conn, $sql);
+?>
 <div class="publucaside_container">
     <div class=" dashbord-image-profile"> 
     <?php 
@@ -7,23 +14,29 @@
         require "../home/imageprofile.php"; 
      }
   ?>
-    </div>
+    </div> 
     <div class="public_medicallist_container">
-        <div class="available_medics">
-            <div class="medical_Category">ODG(120)</div>
-            <div class="medical_list">
-                <a href="">> Metaplzol 17</a>
-                <a href="">> Antacid 70</a>
-                <a href="">> Diphotinset 20</a>
-            </div>
-        </div>
-        <div class="available_medics">
-            <div class="medical_Category">SKIN RELATED (270)</div>
-            <div class="medical_list">
-                <a href="">> Betamethazone 17</a>
-                <a href="">> Antacid 70</a>
-                <a href="">> kupaka 80</a>
-            </div>
-        </div>
+       <?php
+         if(mysqli_num_rows($query)!=0){
+            while($datas = mysqli_fetch_array($query)){
+                $medcategory = $datas['medical_category'];
+
+                echo " <div class='available_medics'>";
+                 echo "<div class='medical_Category'>$medcategory</div>";
+                 $newQuery = "SELECT medical_name from medics where medical_category='$medcategory'";
+                 $runsql = mysqli_query($conn, $newQuery);
+                 while($data = mysqli_fetch_array($runsql)){
+                  $medname = $data['medical_name'];
+                  echo "<div class='medical_list'>";
+                   echo " <a href='./dashbord.php?page=searched&&medics=$medname'>> $medname</a>";
+                echo "</div>";
+                 }
+            echo "</div>";
+            }
+         }else{
+            echo "No Medics";
+         }
+       ?>
+       
     </div>
 </div>

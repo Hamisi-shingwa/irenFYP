@@ -23,36 +23,9 @@ if(!$_SESSION['user_token'] && !$_SESSION['username']){
 <body>
 <script src="../public/js/vanila/pre-loader.js"></script>
     <div class="main-container">
-        <?php require "./innavbar.php"?>
-        <?php require "./authsection.php"?>
-        <div class="public-section">    
-            <div class="left-section">
-                <?php require "./authaside.php"?>
-            </div>
-        <div class="right-section">
-            <?php 
-            $page = "";
-            if(isset($_GET['page'])){
-                $page = $_GET['page'];
-             {
-                  
-    
-                }
-            }
-             if($page){
-              
-                if($page!="userprofile" && $page!="Setting")   require "./middashbord.php";
-                require "./pagerender.php";
-                if($page=='currently')    include "./alert_filecheckup.php";
-             }
-             else{
-              
-             }
-            ?>
-          
-        </div>
-        </div>
-           </div>
+        <?php require "./wideviewinnav.php"?>
+        <div class="medical_displayed">    
+            <?php require "../searched/medical_list.php"?>
         </div>
     </div> 
     <div class='dialog-container'>

@@ -10,7 +10,7 @@ $hidden = $_POST['hidden'];
 $file = "";
  
 //let us check user has profile or not
-if($hidden=="NULL"){
+if(!empty($profile['tmp_name'])){ 
     $temfile = $profile['tmp_name'];
     $filename = $profile['name'];
     $ext = explode('.',$name);

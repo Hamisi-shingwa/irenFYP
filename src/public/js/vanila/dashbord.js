@@ -3,8 +3,11 @@
 const menu = document.querySelector('.menu_page');
 const asideelement = document.querySelector('.menu-container')
 
-menu.onclick = ()=>{
-asideelement.classList.toggle('transMenu')
+if(menu){
+  console.log(menu)
+  menu.onclick = ()=>{
+    asideelement.classList.toggle('transMenu')
+    }
 }
 
 
@@ -99,6 +102,9 @@ const Navsearch = document.getElementById('inav-search');
 const Navselect = document.getElementById('select')
 const navbtn = document.getElementById('innavbutton')
 
+console.log(Navsearch)
+
+
 async function  searchMedics(){
    const response = await fetch("../searched/ajaxmedics.php");
    const data = await response.json()
@@ -107,7 +113,13 @@ async function  searchMedics(){
 
 function createLink(value){
   const a = document.createElement('a')
-  a.href = `./dashbord.php?page=searched&&medics=${value}`
+  const isInnav = document.getElementById('widenavbar');//Let to check which kind on innavbar is n=this is hidden input found on wideviewnav.php
+  if(isInnav){
+    a.href = `../dashbord/dashbord.php?page=searched&&medics=${value}`
+  }else{
+    a.href = `./dashbord.php?page=searched&&medics=${value}`
+  }
+  
   a.click()
 }
 navbtn.onclick = async ()=>{
@@ -132,3 +144,21 @@ navbtn.onclick = async ()=>{
 
 
 }
+// **********************************************
+// DASHBORD FOR ONLY AUTHASIDE File
+// **********************************************
+const displayedCategorys = document.querySelectorAll('.medical_Category');
+displayedCategorys.forEach(category=>{
+  category.onclick = ()=>{
+  const medical_lists = document.querySelectorAll('.medical_list');
+  const Sibling =  category.nextElementSibling
+   medical_lists.forEach(medical=>{
+      medical.style.display = "none"
+    })
+  if(Sibling.style.display = "none" ) {
+    Sibling.style.display = "block" 
+  }else{
+    Sibling.style.display = "none" 
+  }
+  }
+})

@@ -7,6 +7,7 @@ $sql = "SELECT medical_name from medics where utoken='$token'";
 
 ?>
 <div class="exnav_container">
+    <input type="hidden" id="widenavbar">
     <div class="exnav_header">
         <div class="exnav_text">Welcome !</div>
         <div class="exnav_dashbord"></div>
@@ -41,10 +42,10 @@ $sql = "SELECT medical_name from medics where utoken='$token'";
             </div>
            
            <div class="exnavbar-link-element">
-           <a href="../wideview/main.php?page=allMedics">Available medics</a>
-            <a href="./dashbord.php?page=Addmedics">New medics</a>
+           <a href="./main.php?page=allMedics">Available medics</a>
+            <a href="../dashbord/dashbord.php?page=Addmedics">New medics</a>
             <div class="exnav_login_btn">
-                <a href='../authentic/logout.php'><button class="exnavlogin_btn btncolor">Logout</button></a>
+                <a href='../dashbord/dashbord.php?page=currently'><button class="exnavlogin_btn btncolor">back</button></a>
             </div>
            </div>
         </div>

@@ -16,7 +16,7 @@ if($query){
     $message = base64_encode("something wrong while try to retrieve your information");
     header("location:../dashbord/dashbord.php?page=userprofile?msg=$message");
 }
-
+ 
 ?>
 <div class='form-container edit-user-container'>
     <h4>USER PROFILE</h4>
@@ -49,23 +49,23 @@ if($query){
             </div>
         </div>
     </div>
-  
+   
    </form>
    
-   <?php if(isset($_GET['status'])){
-       $info = $_GET['status'];
-       if($info=="success"){
-        echo "
-        <div class='added-feedback'>
-        <div class='feedbackIcon'><img src='../assets/icons/Tick.png' alt=''></div>
-        <div class='status'>Successfull added</div>
-  
-    </div>";
-
-       }
-    }
+    <?php if(isset($_GET['status'])){
+        $info = $_GET['status'];
+        if($info=="success"){
+            echo "
+            <div class='added-feedback'>
+            <div class='feedbackIcon'><img src='../assets/icons/Tick.png' alt=''></div>
+            <div class='status'>Successfull Edited</div>
     
-    ?>
+        </div>";
+
+        }
+        }
+        
+        ?>
       
 </div>
 <div class="feedback-element <?php if(isset($_GET['msg'])) echo "show"?>">

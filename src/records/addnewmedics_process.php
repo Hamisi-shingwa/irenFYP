@@ -13,7 +13,7 @@
 
 //call here our insert function
 insertNewMedics($conn, $utoken, $category, $medicalname, $dosage ,$expiredOn, $price);
-
+ 
  //function that insert newmedics
  function insertNewMedics($conn, $utoken, $category, $medicalname, $dosage, $expiredOn, $price){
 

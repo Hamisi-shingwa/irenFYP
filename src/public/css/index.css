@@ -25,7 +25,7 @@ body *{
     height: 100vh;
    
 }
-.public-section{
+.public-section{ 
     display: flex;
 }
 .left-section{
@@ -42,4 +42,53 @@ body *{
 }
 .btncolor{
     background-color: var(--btnColor);
+}
+/* ************************P
+Pre-Loader css
+************************ */
+.LoaderContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+   
+}
+.middleLoader{
+    width: 30%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(99, 89, 89);
+    border-radius: 5px;
+}
+.Loader{
+    margin-left: 10px;
+    border: 5px solid var(--bg);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border-bottom: 3px dotted var(--bg); 
+    border-left: none;
+    animation-name: preLoader;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: none;
+}
+.textLoader{
+    color: rgb(5, 9, 14);
+    font-size: large;
+}
+
+@keyframes preLoader {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }

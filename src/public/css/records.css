@@ -127,3 +127,54 @@ HISTORY SELLS CSSS
     display: grid;
     place-items: center;
 }
+
+/* ******************************
+ADD SINGLE MEDICS
+****************************** */
+.add-singlemedics-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#add-single-medics{
+    width: 50%;
+}
+#add-single-medics label, input{
+    display: block;
+    padding: 5px;
+}
+#add-single-medics input{
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 1px 1px grey;
+}
+#add-single-medics label{
+    margin-bottom: -4px;
+}
+.submit-button{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.submit-button a{
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background-color:antiquewhite;
+    border-radius: 5px;
+    color: red;
+    width: 47%;
+}
+.submit-button #single-submit{
+    width: 47%;
+    border: none;
+    width: 47%;
+    background-color: var(--bg);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}

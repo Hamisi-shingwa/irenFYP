@@ -4,19 +4,20 @@ require_once("../db/dbconnect.php");
 
 $sql = "SELECT * from system_setting where utoken='$token'";
 $query = mysqli_query($conn, $sql);
-
-if($query){
-    $datas = mysqli_fetch_array($query);
-    $system_name = $datas['system_name'];
-    $default_profile = $datas['default_profile'];
-    $custome_profile = $datas['custome_profile'];
-    $default_logo = $datas['default_logo'];
-    $custome_logo = $datas['custome_logo'];
-    $about_content = $datas['about_content'];
-    $physical_address = $datas['physical_address'];
+$hasSetting = mysqli_num_rows($query);
+if($hasSetting!=0){
+   $datas = mysqli_fetch_array($query);
+   $system_name = $datas['system_name'];
+   $default_profile = $datas['default_profile'];
+   $custome_profile = $datas['custome_profile'];
+   $default_logo = $datas['default_logo'];
+   $custome_logo = $datas['custome_logo'];
+   $about_content = $datas['about_content'];
+   $physical_address = $datas['physical_address'];
 }
+
 ?>
-<div class="setting-conatiner">
+<div class="form-container setting-conatiner">
      <form action="../authorized/changesystemsetting_process.php" method="post" id="system-setting" enctype="multipart/form-data">
      <div class="top-system-content">
         <label for="System Name">System Name</label>
@@ -70,4 +71,18 @@ if($query){
         <input id='setting-submit' type="submit" name="sbtn" value="save">
       </div>
      </form>
+     <?php if(isset($_GET['status'])){
+       $info = $_GET['status'];
+       if($info=="success"){
+        echo "
+        <div class='added-feedback'>
+        <div class='feedbackIcon'><img src='../assets/icons/Tick.png' alt=''></div>
+        <div class='status'>Setting Saved</div>
+  
+    </div>
+  </div>";
+       }
+    }
+    
+    ?>  
 </div>

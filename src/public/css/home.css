@@ -106,7 +106,7 @@ EXNAVBAR CSS
     width: 40%;
     height: 100%;
 }
-.exnavbar-link-element{
+.exnavbar-link-element{ 
     display: flex;
     width: 25%;
 }
@@ -116,6 +116,7 @@ EXNAVBAR CSS
     width: 100%;
     height: 100%;
     text-decoration: none;
+    font-size: 9px;
    
 }
 .exnav_login_btn a button{
