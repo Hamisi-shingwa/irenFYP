@@ -49,6 +49,7 @@ CREATE TABLE `medics` (
   `medical_category` varchar(90) NOT NULL DEFAULT 'NULL',
   `medical_name` varchar(90) NOT NULL DEFAULT 'NULL',
   `medical_dosage` varchar(5) NOT NULL DEFAULT 'NULL',
+  `total_price` varchar(24) NOT NULL DEFAULT 'NULL',
   `medical_lebel` varchar(255) NOT NULL DEFAULT 'NULL',
   `expiring_date` varchar(255) NOT NULL DEFAULT 'NULL',
   `utoken` varchar(255) NOT NULL DEFAULT 'NULL',

@@ -34,7 +34,7 @@
             <input type="text" placeholder="type dosage amount" name="mdosage" value="<?php echo $mddose?>">
             <label for="Total price">Total price</label>
             <input type="text" name="price" value="<?php echo $mdprice?>">
-            <label for="Expiring Date">Expiring Date</label>
+            <label for="Expiring Da te">Expiring Date</label>
             <input type="date" name="expiredOn" value="<?php echo $expiredTime?>">
         </div>
         <div class="submit-button">

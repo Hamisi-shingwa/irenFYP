@@ -32,7 +32,7 @@ insertNewMedics($conn, $utoken,  $mdname, $dosage ,$expiredOn, $price,  $newiD);
     global $newDose;  
     $currentTime = time();//lets us process the time
     $expiredsec = strtotime($expiringDate);
-    $nowSec = $expiredsec - $currentTime;
+    $nowSec = $expiredsec - $currentTime; 
     $nowsecToDays = $nowSec / (60 * 60 * 24);
     $availableDays = floor($nowsecToDays);
     
@@ -51,7 +51,7 @@ insertNewMedics($conn, $utoken,  $mdname, $dosage ,$expiredOn, $price,  $newiD);
         header("location:../dashbord/dashbord.php?page=Editfirstadded&&medic=$newiD&&msg=$message");
 
       }else{
-        $updaTe = "UPDATE medics SET medical_dosage='$dosage',expiring_date='$expiredOn' where medics.id='$newiD'";
+        $updaTe = "UPDATE medics SET medical_dosage='$dosage',total_price='$price',expiring_date='$expiredOn' where medics.id='$newiD'";
         $query = mysqli_query($conn, $updaTe);
         if($query){
          header("location:../dashbord/dashbord.php?page=Editfirstadded&&medic=$newiD&&status=succes");
