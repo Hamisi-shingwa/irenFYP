@@ -20,6 +20,12 @@ if(!$token){
     $page == "leswarning" ? header("location:../dashbord/dashbord.php?page=warningList1") : "";
     $page == "searched" ? header("location:../dashbord/dashbord.php?page=searched&&medics=$Medics") : "";
     $page == "allMedics" ? header("location:../wideview/main.php?page=allMedics&&medics=$Medics") : "";
+    if($page=="Sellhistory"){
+      $sql2 = "DELETE from sells where id='$mdid'";
+      $query = mysqli_query($conn, $sql2);
+      header("location:../dashbord/dashbord.php?page=Sellhistory");
+    }
+
   }
 }
 ?>

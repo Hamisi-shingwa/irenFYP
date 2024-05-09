@@ -1,22 +1,26 @@
 <?php
 session_start();
+error_reporting(0);
 $token = $_SESSION['user_token'];
 require_once('../db/dbconnect.php');
 
 $sname = $_POST['sname'];
 $uaddress = $_POST['uaddress'];
 $aboutcontent = $_POST['aboutcontent'];
-    // $profile = $_POST['profile'];
-    // $logo = $_POST['logo'];
+    $profile = $_POST['profile'] ? "true" : "NULL";
+    $logo = $_POST['logo']  ? "true" : "false";
 $profileChecked = $_POST['profileChecked']; 
 $logoChecked = $_POST['logoChecked'];
 $cprofile = $_FILES['cprofile'];
-$clogo = $_FILES['clogo'];
+$clogo = $_FILES['clogo']; 
 $profilevalue = $_POST['profilevalue'];
 $logovalue = $_POST['logovalue'];
 $hasCustomeLogo = $logovalue;
 $hasCustomeprofile = $profilevalue;
 //Then lets us create function for upload file
+
+$profile=="NULL" ? $profileChecked = "false" : $profileChecked = "true";
+$logo=="false" ? $logoChecked = "false" : $logoChecked = "true";
 
 function fileUploads($myfile){
   $fileSource = $myfile['tmp_name'];
@@ -30,7 +34,8 @@ function fileUploads($myfile){
 }
 
 if(!empty($cprofile['tmp_name'])){
-    $hasCustomeprofile = fileUploads($cprofile);  
+    $hasCustomeprofile = fileUploads($cprofile); 
+
 }
 if(!empty($clogo['tmp_name'])){
     $hasCustomeLogo = fileUploads($clogo);

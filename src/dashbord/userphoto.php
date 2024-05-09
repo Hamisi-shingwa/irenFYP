@@ -1,6 +1,7 @@
   <?php
    require_once("../db/dbconnect.php");
    $token = $_SESSION['user_token'];
+   
 
    $sql = "SELECT users.profile from users where utoken='$token'";
    $query = mysqli_query($conn, $sql);

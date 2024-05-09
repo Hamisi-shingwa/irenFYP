@@ -37,7 +37,7 @@ $insert_query_execution = mysqli_query($conn, $insert_query);
 if ($insert_query_execution) {
     //After store user information then we run query to get stored 
     //information so as we can store it within a session to allow user migrate smoothly within a system
-$select_query = "SELECT id, name, utoken, password from users WHERE users.email = '$user_name'";
+$select_query = "SELECT id, name, utoken, password from users WHERE users.utoken = '$token'";
 $select_query_execution = mysqli_query($conn, $select_query);
 if ($select_query_execution) {
 $user_data = mysqli_fetch_array($select_query_execution);
@@ -45,9 +45,11 @@ $user_data = mysqli_fetch_array($select_query_execution);
 session_start();
 $_SESSION['username'] = $user_name;
 $_SESSION['user_id'] = $user_data['id'];
-$_SESSION['user_token'] = $user_data['utoken'];
+$_SESSION['user_token'] = $user_data['utoken']; 
 
-//Then after initiate session we can allow user to get more system access
+//Then after initiate session lets update system setting table to get access of this user info
+$sql_sett = "UPDATE system_setting set utoken='$token' where id=1";
+$run_query = mysqli_query($conn, $sql_sett);
 header("location:../dashbord/dashbord.php?page=currently");
 exit;
 }

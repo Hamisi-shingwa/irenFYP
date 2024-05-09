@@ -12,8 +12,10 @@ if(mysqli_num_rows($query) != 0){
     <div>Selled Dosage</div>
     <div>Selled Amount</div>
     <div>Selled Date</div> 
+    <div>Delete</div> 
   </div>";
     while($datas = mysqli_fetch_array($query)){
+        $id = $datas['id'];
         $name = $datas['medical_name'];
         $dose = $datas['dose'];
         $price = $datas['total_price'];
@@ -25,6 +27,8 @@ if(mysqli_num_rows($query) != 0){
           <div>$dose</div>
           <div>$price</div>
           <div>$date</div>
+          <div class='delete'>Delete</div>
+          <a style='display:none;' href='../authorized/deletemedics.php?mdid=$id&&page=Sellhistory'></a>
         </div>";
         $n++;
     }

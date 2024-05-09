@@ -12,13 +12,13 @@ function checkImage($conn){
     $datas = mysqli_fetch_array($query);
     $isDefault = $datas['default_profile'];
     $isCustomed = $datas['custome_profile'];
-    if($isCustomed !="NULL"){
-     return $isCustomed;
+    if($isDefault =="true"){
+        return "false";
     }else{
-        return false;
+        return $isCustomed;  
     }
    }
-}
+} 
 
 
 
@@ -31,12 +31,14 @@ function checkImage($conn){
     }else{
         include_once("../db/dbconnect.php");
         $file = checkImage($conn);
-        if($file!=false) {
-            echo "<img src='$file' alt=''>";
+       
+        if($file =="false") {
+         
+            echo "<img src='../assets/icons/RenderedMedics0002.png' alt=''>";
           
         }else{
-            echo "<img src='../assets/icons/RenderedMedics0002.png' alt=''>";
-      
+          
+            echo "<img src='$file' alt=''>";
         }
     }
  }else{

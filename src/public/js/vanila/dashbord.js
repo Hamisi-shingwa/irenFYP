@@ -109,7 +109,7 @@ async function  searchMedics(){
    const response = await fetch("../searched/ajaxmedics.php");
    const data = await response.json()
    return data
-}
+} 
 
 function createLink(value){
   const a = document.createElement('a')

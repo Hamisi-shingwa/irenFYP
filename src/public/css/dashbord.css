@@ -1,8 +1,17 @@
 /* *****************************
 NAV BAR  CSS
 **************************** */
+.exnav_jumbotrone_content .system_logo{
+  width: 20%;
+  height: 50px;
+}
+.exnav_jumbotrone_content .system_logo img{
+ width: 100%;
+ height: 100%;
+}
 .topsection_element{
     position: relative;
+   
     
 }
 .menu-container{
