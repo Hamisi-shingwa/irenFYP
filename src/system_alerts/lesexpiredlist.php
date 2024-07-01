@@ -42,12 +42,20 @@ if($expired ==0){
          
 
         if($diffInDays <=30 ){
+          $is_expired = false;
           $info = floor($diffInDays);
+          if($info < 1){
+            $is_expired = true;
+          }
           echo "<div class='expired-list'>";
           echo "<div> $id</div>";
           echo "<div>$mdcategory</div>";
           echo "<div>$mdname</div>";
+         if($is_expired){
+          echo "<div class='status'>Expired</div>";
+         }else{
           echo "<div class='status'>$info days remain to expire</div>";
+         }
           echo "<div class='delete'>Delete</div>";
           echo "<a href='../authorized/deletemedics.php?mdid=$id&&page=lesexpired'></a>";
           echo "</div>";

@@ -16,6 +16,7 @@
     <div class='header'>Medical Category</div>
     <div class='header'>Medical Name</div>
     <div class='header'>Number of Dosage</div>
+    <div class='header'>TotalPrice</div>
     <div class='header'>Added Date</div>
     <div class='header'>Expired Date</div>
     <div class='header'>Status</div>
@@ -30,23 +31,33 @@
         $mdlabel = $datas['medical_lebel'];
         $expiringDate = $datas['expiring_date'];
         $addedOn = $datas['added_date'];
+        $total_price = $datas['total_price'];
        
         $expiredDate = strtotime($expiringDate);
         $diffInSeconds =  $expiredDate - $currentTime;
-
+        
         $diffInDays = ($diffInSeconds / (60 * 60 * 24));
         $n++;
 
        
           $info = floor($diffInDays);
+          $is_expired = false;
+          if($info < 1){
+            $is_expired = true;
+          }
           echo "<div class='expired-list'>";
           echo "<div> $n</div>";
           echo "<div>$mdcategory</div>";
           echo "<div>$mdname</div>";
           echo "<div>$mddosage</div>";
+          echo "<div>$total_price</div>";
           echo "<div>$addedOn</div>";
           echo "<div>$expiringDate</div>";
-          echo "<div class='status'>$info days remain to expire</div>";
+          if($is_expired){
+            echo "<div class='status'>Expired</div>";
+           }else{
+            echo "<div class='status'>$info days remain to expire</div>";
+           }
           echo "<div class='delete'>Delete</div>";
           echo "<a href='../authorized/deletemedics.php?mdid=$id&&page=allMedics'></a>";
           echo "</div>";
