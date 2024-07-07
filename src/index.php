@@ -13,6 +13,7 @@
 <body>
 <script src="./public/js/vanila/pre-loader.js"></script>
     <div class="main-container">
+   
         <?php require "./home/exnavbar.php"?>
         <?php require "./home/publicsection.php"?>
         <div class="public-section">

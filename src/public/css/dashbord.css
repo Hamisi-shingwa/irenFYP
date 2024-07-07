@@ -213,10 +213,11 @@ EDITUSER CSS
  ALERT CSS
  ******************************** */
  .alert-container{
-    height: 70%;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+   border: 0.1px solid rgb(227, 220, 220);
     align-items: center;
  }
  .alert-container .alerts-number{
@@ -231,6 +232,10 @@ EDITUSER CSS
     border-radius: 5px;
     display: grid;
     place-items: center;
+    
+ }
+ .alert-container .alert-message p{
+   color: red;
  }
  .alert-container .alert-message a{
     display: grid;
@@ -238,7 +243,7 @@ EDITUSER CSS
     height: 100%;
     place-items: center;
     text-decoration: none;
-    color: red;
+    color: green;
  }
 
  /* ************************************
