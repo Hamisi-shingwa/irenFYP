@@ -175,7 +175,7 @@ PUBLIC SECTION
     align-items: center;
 }
 .active_section{
-    color: green; 
+    color: rgb(0, 170, 255); 
 }
 
 /* *****************************************************

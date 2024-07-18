@@ -82,7 +82,7 @@ SECTION CSS
 }
 .middashbord-container .top .warning-size{
  font-weight: bold;
- color: brown;
+ color: rgb(230, 0, 0);
 }
 .middashbord-container .top .warning-info{
     color: rgb(178, 178, 24);
@@ -285,7 +285,7 @@ EDITUSER CSS
    
  }
  .dialog-container .dialog-message{
-    color: rgb(149, 11, 11) ;
+    color: rgb(37, 131, 253) ;
     display: grid;
     place-items: center;
     

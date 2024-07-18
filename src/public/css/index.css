@@ -16,7 +16,7 @@ body *{
     box-sizing: border-box;
     font-size: 10pt;
     font-family:  'Times New Roman', Times, serif;
-    color: rgb(87, 83, 83);
+    color: rgb(85, 83, 87);
 }
 .main-container{
     width: 90vw;
