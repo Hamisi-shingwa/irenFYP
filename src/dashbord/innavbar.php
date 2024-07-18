@@ -20,7 +20,7 @@ $query1 = mysqli_query($conn, $sql);
 <div class="search_element_contaner">
 <div class="search_element">
 <div class="search_icon"><img src="../assets/icons/search_FILL0_wght400_GRAD0_opsz48.png" alt=""></div>
-<input type="text" class="exnav_search" id='inav-search'>
+<input type="text" class="exnav_search" id='inav-search' placeholder="Type medics here">
 </div>
 <div class="exnav_select_element">
 <select name="select_element" id="select">
